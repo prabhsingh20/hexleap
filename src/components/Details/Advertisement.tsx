@@ -1,8 +1,7 @@
-import React from "react";
 
 const Advertisement: React.FC = () => {
   return (
-    <div className="advertisement relative flex h-[511px]  w-[237px] flex-col gap-5 bg-light-secondary p-2 dark:bg-dark-secondary">
+    <div className="shadow-custom advertisement relative flex h-[511px]  w-[237px] flex-col gap-5 bg-light-secondary p-2 dark:bg-dark-secondary">
       <img
         className="h-[218px] w-[217px]"
         src="/playeriamges/adver.jpg"

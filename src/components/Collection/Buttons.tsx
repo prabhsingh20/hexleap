@@ -2,7 +2,7 @@ interface ButtonsProps {
   nextSlide: () => void;
   prevSlide: () => void;
   startIndex: number;
-  data: any[]; // Adjust the type according to your data structure
+  data: any[];
 }
 
 const Buttons: React.FC<ButtonsProps> = ({

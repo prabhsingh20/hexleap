@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -18,7 +19,7 @@ const config: Config = {
       colors: {
         light: {
           main: "#F7F7F8",
-          secondary: " #F7F7F8",
+          secondary: " #fff",
           text: "#000",
           paragraph: "#525965",
           button: "#2C9CF0",
