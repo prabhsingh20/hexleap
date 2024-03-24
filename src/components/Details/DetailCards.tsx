@@ -44,9 +44,9 @@ const data: CardData[] = [
 const DetailCards: React.FC = () => {
   return (
     <div className="flex justify-center px-2 py-10">
-      <div className="flex h-[673px] w-[1241px] flex-col gap-6">
+      <div className="flex flex-col gap-6 xl:h-[673px] xl:w-[1241px]">
         <Header />
-        <ul className="flex gap-4">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {data.map((card) => (
             <Cards cards={card} key={card.id} />
           ))}

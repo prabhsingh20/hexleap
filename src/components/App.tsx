@@ -17,8 +17,7 @@ const App: React.FC = () => {
     <div className="h-[1778px]">
       <button
         className="absolute right-10 top-5 text-light-text dark:text-dark-text"
-        onClick={() => setDarkMode(!darkMode)
-        }
+        onClick={() => setDarkMode(!darkMode)}
       >
         {!darkMode ? (
           <span className="material-symbols-outlined text-3xl">dark_mode</span>

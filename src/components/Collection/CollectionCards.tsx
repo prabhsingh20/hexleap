@@ -17,7 +17,7 @@ const CollectionCards: React.FC<CollectionCardProps> = ({
     collectionCards;
 
   return (
-    <li className="shadow-custom relative flex h-[624px] w-[257px] flex-col items-center gap-3 bg-light-main p-3 dark:bg-dark-secondary">
+    <li className="relative flex h-[624px] w-[257px] flex-col items-center gap-3 bg-light-main p-3 shadow-custom dark:bg-dark-secondary">
       <img
         className="relative h-[401.2px] w-[233.1px] "
         src={image}

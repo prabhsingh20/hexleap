@@ -14,7 +14,7 @@ const Buttons: React.FC<ButtonsProps> = ({
   return (
     <>
       <button
-        className="arrow-button absolute left-20"
+        className="arrow-button absolute -left-6 md:left-5 lg:-left-8 xl:left-20"
         onClick={prevSlide}
         disabled={startIndex === 0}
       >
@@ -23,7 +23,7 @@ const Buttons: React.FC<ButtonsProps> = ({
         </span>
       </button>
       <button
-        className="arrow-button absolute right-20"
+        className="arrow-button absolute -right-6 md:right-5 lg:-right-8 xl:right-20 "
         onClick={nextSlide}
         disabled={startIndex === data.length - 3}
       >

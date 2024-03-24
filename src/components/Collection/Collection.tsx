@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CollectionCards from "./CollectionCards";
 import HeaderCollection from "./HeaderCollection";
 import Buttons from "./Buttons";
@@ -65,13 +65,31 @@ const data: CollectionData[] = [
     location: "Las Vegas Ballpark, Las Vegas, Nevada",
     collection: "Take Flight Collection",
   },
+  // Add more data objects as needed
 ];
 
 const Collection: React.FC = () => {
   const [startIndex, setStartIndex] = useState(0);
+  const [numCardsPerPage, setNumCardsPerPage] = useState(1);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 768) {
+        setNumCardsPerPage(1);
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        setNumCardsPerPage(2);
+      } else {
+        setNumCardsPerPage(3);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial call to set numCardsPerPage based on initial window width
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextSlide = () => {
-    if (startIndex < data.length - 3) {
+    if (startIndex < data.length - numCardsPerPage) {
       setStartIndex(startIndex + 1);
     }
   };
@@ -84,15 +102,17 @@ const Collection: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center text-center">
-      <div className="dark:bg-gradient-dark bg-gradient-light  relative flex h-[918px] w-[1240px] flex-col items-center justify-evenly">
+      <div className="relative flex h-[918px] flex-col items-center justify-evenly bg-gradient-light dark:bg-gradient-dark lg:w-[1240px]">
         <HeaderCollection />
-        <ul className="flex gap-8">
-          {data.slice(startIndex, startIndex + 3).map((collectionCards) => (
-            <CollectionCards
-              collectionCards={collectionCards}
-              key={collectionCards.id}
-            />
-          ))}
+        <ul className="flex flex-wrap justify-center gap-8">
+          {data
+            .slice(startIndex, startIndex + numCardsPerPage)
+            .map((collectionCards) => (
+              <CollectionCards
+                collectionCards={collectionCards}
+                key={collectionCards.id}
+              />
+            ))}
         </ul>
         <Buttons
           nextSlide={nextSlide}
