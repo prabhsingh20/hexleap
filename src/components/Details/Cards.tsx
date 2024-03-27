@@ -11,7 +11,7 @@ const Cards: React.FC<CardsProps> = ({ cards }) => {
   const { image, teamName, totalEvents, sports } = cards;
 
   return (
-    <li className="shadow-custom flex h-[511px] w-[237px] flex-col gap-3 bg-light-secondary p-2 dark:bg-dark-secondary">
+    <li className="flex h-[511px] w-[237px] flex-col gap-3 bg-light-secondary p-[0.6rem] shadow-custom dark:bg-dark-secondary">
       <div className="h-[385.3px] w-[217px] overflow-hidden">
         <img className="w-[219px]" src={image} alt={teamName} />
       </div>

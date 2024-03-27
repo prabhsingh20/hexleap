@@ -35,6 +35,8 @@ const CollectionCards: React.FC<CollectionCardProps> = ({
       <button className="mt-2 h-[36px] w-[213px] bg-[#000] text-[12.7px] font-medium">
         {collection}
       </button>
+      <div className="absolute -left-[0.6em]  top-[26.5rem] h-5 w-5 rounded-full  dark:bg-gradient-dark"></div>
+      <div className="absolute -right-[0.6rem]  top-[26.5rem] h-5 w-5 rounded-full  dark:bg-gradient-dark"></div>
     </li>
   );
 };
