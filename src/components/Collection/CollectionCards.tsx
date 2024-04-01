@@ -23,7 +23,7 @@ const CollectionCards: React.FC<CollectionCardProps> = ({
         src={image}
         alt={teamName}
       />
-      <h3 className="mt-5 pt-1 font-Poppins text-[17px] font-medium text-light-text dark:text-dark-text">
+      <h3 className="mt-5 pt-2 font-Poppins text-[17px] font-medium text-light-text dark:text-dark-text">
         {teamName}
       </h3>
       <p className="font-Poppins text-[14px] font-normal text-light-text dark:text-dark-text">
@@ -35,9 +35,6 @@ const CollectionCards: React.FC<CollectionCardProps> = ({
       <button className="mt-2 h-[36px] w-[213px] bg-[#000] text-[12.7px] font-medium">
         {collection}
       </button>
-
-      {/* <div className="absolute -left-[0.6em]  top-[26.5rem] h-5 w-5 rounded-full  dark:bg-gradient-dark"></div> */}
-      {/* <div className="absolute -right-[0.6rem]  top-[26.5rem] h-5 w-5 rounded-full  dark:bg-gradient-dark"></div> */}
 
       <div className="absolute left-[2px]  top-[26.5rem] h-[20px] w-[20px] -translate-x-[12px] rounded-full bg-gradient-to-b from-[#F9F8FF] to-[#F3F9FF] shadow-[inset_-7px_0px_8px_0px_#00000015] dark:from-[#18282A] dark:to-[#221A2C]"></div>
 
