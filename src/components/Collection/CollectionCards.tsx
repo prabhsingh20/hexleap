@@ -32,7 +32,7 @@ const CollectionCards: React.FC<CollectionCardProps> = ({
       <p className="font-Inter text-[14px] font-normal text-light-paragraph dark:text-dark-paragraph">
         {location}
       </p>
-      <button className="mt-2 h-[36px] w-[213px] bg-[#000] text-[12.7px] font-medium">
+      <button className=" h-[36px] w-[213px] bg-[#000] p-2 text-[12.7px] font-medium">
         {collection}
       </button>
 
